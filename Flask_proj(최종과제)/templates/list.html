@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/ft.css')}}">
+</head>
+<body>
+    <main>
+        <h1>공지 게시판</h1>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for msg in messages %}
+        <div class="msg">{{ msg }}</div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <div class="tab">
+            <table>
+                <tr class="ht">
+                    <colgroup>
+                        <col width="150px">
+                        <col width="150px">
+                        <col width="300px">
+                        <col width="150px">
+                    </colgroup>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>등록일</th>
+                    <th>관리</th>
+                </tr>
+                {% if titles %}
+                {% for title in titles %}
+                <tr>
+                    <td>{{loop.index}}</td>
+                    <td>{{title}}</td>
+                    <td>{{times[loop.index0]}}</td>
+                    <td><a href="{{url_for('delete',index=loop.index0)}}" class="dl">[삭제]</a></td>
+                </tr>
+                {% endfor %}
+                {% else %}
+                <tr>
+                    <td colspan="4" class="nn">등록된 게시글이 없습니다.
+                        <a href="{{ url_for('write') }}">새 글 작성하기</a>
+                    </td>
+                </tr>
+                {% endif %}
+            </table>
+        </div>
+        <form action ="{{ url_for('write') }}" method="GET">
+                <button type="submit" class="sb">글 작성하기</button>
+        </form>
+    </main>
+</body>
+</html>

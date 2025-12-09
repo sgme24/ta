@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="{{url_for('static', filename='css/ft.css')}}">
+</head>
+<body class="wh">
+    <main>
+        <h1> 새 공지사항 작성</h1>
+        <div class="jm">
+        <form action="{{ url_for('write') }}" method="POST" class="aab">
+            <label for="title">제목:</label>
+            <input type="text" id="title" name="title" required>
+            <label for="content">내용:</label>
+            <textarea id="content" name="content" rows="10" cols="50" placeholder="공지 내용을 입력하세요."></textarea>
+            <br>
+            <div class="last">
+                <button type="submit">등록하기</button>
+                <a href="{{ url_for('index') }}" style="font-size:small;padding-left:10px; margin-bottom:20px;font-weight:lighter;">목록으로</a>
+            </div>    
+         </form>
+        </div>
+    </main>
+</body>
+</html>

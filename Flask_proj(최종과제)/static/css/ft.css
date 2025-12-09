@@ -1,0 +1,22 @@
+body{background-color: #eee;}
+h1{font-size:800; text-align:center; margin:20px 0 20px 0; padding-top:10px;}
+main{margin:20px auto; width:800px;background-color: white;border-radius:3px; border:#c1b8b8 1px solid;}
+th{text-align: center; color:white; background-color:rgb(66, 131, 211); height:40px;margin:0 0; border:#c1b8b8 1px solid;}
+.tab{display:flex; justify-content:center;padding:0px;}
+form{display:flex; flex-direction:row-reverse;margin:30px 25px;}
+
+.nn{text-align: center;font-style:italic; color:gray; font-size:smaller;}
+.sb{border:none;width:80px; height:30px; background-color:rgb(3, 198, 123); color:white;margin-bottom:20px;border-radius:3px;}
+.aab{margin:20px; display:flex; flex-direction:column; font-weight:bold;}
+.dl{color:red;}
+.msg{margin:0 0px 0 30px;font-size:smaller;}
+tr td{text-align:center;margin:10px;padding:2px;border:#eee 1px solid; font-size:smaller;}
+table tr:nth-child(even){background-color: white;}
+table tr:nth-child(odd){background-color: #eee;}
+tr td:nth-child(2){text-align: left;}
+table{border-collapse:collapse; position:relative; bottom:30px;}
+button{border-radius:3px; width:55px; height:20px; font-size:11px; padding:0px;}
+.last{display:flex;}
+textarea{color:gray; font-size:12px;padding:5px;border:#c1b8b8 1px solid;}
+input{height:20px; margin-bottom:10px;border:#c1b8b8 1px solid;}
+tr{height:40px;}
